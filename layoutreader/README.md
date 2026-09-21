@@ -23,7 +23,7 @@ pip install -e .
 
 ## Run
 1. Download the pre-processed ReadingBank data from [Hugging Face](https://huggingface.co/datasets/zilongwang/ReadingBank), provided in Parquet format. For more details of the dataset, please refer to [ReadingBank](https://aka.ms/readingbank).
-2. (Optional) Download our pre-trained model ([`layoutreader-base-readingbank.zip`](https://mail2sysueducn-my.sharepoint.com/:u:/g/personal/huangyp28_mail2_sysu_edu_cn/ET9XynvgSZFLhPy7p30zbtoBs-T_Yxj6gl_k-b2-N53ChQ?e=gKafBy)) and evaluate it refer to step 4.
+2. (Optional) Download our pre-trained base model from [Hugging Face](https://huggingface.co/zilongwang/layoutreader-base). For the code in this repository, download [`config.json`](https://huggingface.co/zilongwang/layoutreader-base/resolve/main/config.json) and [`pytorch_model.bin`](https://huggingface.co/zilongwang/layoutreader-base/resolve/main/pytorch_model.bin) into the same directory. Alternatively, download and extract [`layoutreader-base-readingbank.zip`](https://drive.google.com/file/d/1SWTPj8bSIUhn79gBdVvHM0bQB9NFHJ_F/view?usp=sharing) from Google Drive. Set `--model_path` in step 4 to the directory containing `config.json` and `pytorch_model.bin`.
 3. Training
     ~~~
     export CUDA_VISIBLE_DEVICE=0,1,2,3
@@ -77,7 +77,7 @@ pip install -e .
     ~~~
 
 ## Results
-Our released [pre-trained model](https://mail2sysueducn-my.sharepoint.com/:u:/g/personal/huangyp28_mail2_sysu_edu_cn/ET9XynvgSZFLhPy7p30zbtoBs-T_Yxj6gl_k-b2-N53ChQ?e=gKafBy) achieves 98.2% Average Page-level BLEU score. Detailed results are reported as follow:
+Our released [pre-trained model](https://huggingface.co/zilongwang/layoutreader-base) achieves 98.2% Average Page-level BLEU score. Detailed results are reported as follow:
 
 * Evaluation results of the LayoutReader on the reading order detection task, where the source-side of training/testing data is in the left-to-right and top-to-bottom order
 
